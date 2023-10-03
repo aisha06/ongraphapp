@@ -36,9 +36,21 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.3
-  camera: any
-  video_player: ^2.5.25+4
-gallery_saver: ^2.3.2
+  camera: ^0.10.5+2
+  permission_handler: any
+  video_player: any
+  video_thumbnail: ^0.5.3
+  gallery_saver: ^2.3.2
+  get: ^4.6.6
+  photo_manager: ^2.7.1
+  path_provider:
+  esys_flutter_share:
+  thumbnails: ^1.0.1
+
+  video_trimmer: ^1.1.0
+  collection: any
+
+
 
 dev_dependencies:
   flutter_test:

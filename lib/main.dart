@@ -1,8 +1,11 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:ongraphapp/component/theme.dart';
 import 'package:ongraphapp/view/becomeselleView.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
 
   runApp(const MyApp());
 }

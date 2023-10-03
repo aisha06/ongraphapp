@@ -1,9 +1,10 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ongraphapp/view/Video_View.dart';
 
 import 'BecomeSeller_view3.dart';
+import 'cameraView.dart';
+import 'imagesendView.dart';
 
 class BecomeSellerview4 extends StatelessWidget {
   BecomeSellerview4({super.key});
@@ -58,14 +59,11 @@ class BecomeSellerview4 extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                GestureDetector(onTap: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>Videoview()));
-
-                },
-
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => CameraApp()));
+                  },
                   child: Container(
                     decoration:
                         BoxDecoration(border: Border.all(color: Colors.blue)),
@@ -121,14 +119,14 @@ class BecomeSellerview4 extends StatelessWidget {
       ),
       bottomNavigationBar: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           ),
           const Icon(
             Icons.arrow_back,
             size: 18.0,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           ),
           const Text(
@@ -138,10 +136,8 @@ class BecomeSellerview4 extends StatelessWidget {
           const Spacer(),
           ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => BecomeSellerview3()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ImagesendView()));
               },
               child: Text(
                 "Send seller request ",
