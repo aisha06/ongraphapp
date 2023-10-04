@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 ThemeData darktheme =ThemeData(
 
@@ -20,8 +21,12 @@ brightness:  Brightness.dark,
 
 ThemeData  lightheme = ThemeData(
     brightness:  Brightness.light,
-
-
+  colorScheme: ColorScheme.light(
+      background:Colors.white
+  ),
+    primaryColor: Colors.white,
+    secondaryHeaderColor: Colors.black,
+    hintColor: Colors.black
 
 
 );

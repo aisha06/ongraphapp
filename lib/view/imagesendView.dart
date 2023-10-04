@@ -78,27 +78,9 @@ class ImagesendView extends StatelessWidget {
                             builder: (ctx) => AlertDialog(
                               title: const Text("Discard seller request?",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 26.0),),
                               content: const Text("All changes will be lost",style: TextStyle(color: Colors.grey),),
-                              actions: <Widget>[ TextButton(
-                                onPressed: () {
-                                  Navigator.of(ctx).pop();
-                                },
-                                child: Container(
-                                  color: Colors.grey,
-                                  padding: const EdgeInsets.all(14),
-                                  child: const Text("Cancel"),
-                                ),
-                              ),
-
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.of(ctx).pop();
-                                  },
-                                  child: Container(
-                                    color: Colors.grey,
-                                    padding: const EdgeInsets.all(14),
-                                    child: const Text("Discard"),
-                                  ),
-                                ),
+                              actions: <Widget>[
+                               Text("Cancel"),
+                                Text("Discard")
                               ],
                             ),
                           );
@@ -180,14 +162,31 @@ class ImagesendView extends StatelessWidget {
             style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
           ),
           const Spacer(),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SendersellerRequestView()));
-              },
-              child: Text(
-                "Send seller request ",
-              ))
+          Stack(
+              children : [
+                Positioned(
+                  top: 20.0,
+                  child: Container(
+                    margin: const EdgeInsets.only(left: 5.0,bottom: 10.0,right: 10.0),
+                    height: 50.0,
+
+                    width: MediaQuery.of(context).size.width/3,
+                    color: Colors.yellow,
+                  ),
+                ),
+                Container(
+                  margin:const  EdgeInsets.only(right: 5.0),
+                  child: ElevatedButton(
+
+                      onPressed: () {
+
+                      },
+                      child: Text(
+                        "Send seller request ",
+                      )),
+                ),
+              ]
+          )
 
         ],
       ),

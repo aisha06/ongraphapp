@@ -61,8 +61,8 @@ class BecomeSellerview4 extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CameraApp()));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => CameraApp()));
                   },
                   child: Container(
                     decoration:
